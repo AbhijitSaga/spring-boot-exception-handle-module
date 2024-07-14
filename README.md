@@ -9,7 +9,7 @@
 
 2.  Get Api-url :-
    localhost:8080/cal
-   Reponse string:-
+   ReponseString:-
    Exception directly throws by  ExceptionController it is global Exception class
 
 
