@@ -4,7 +4,8 @@ import java.util.Date;
 
 public class ErrorDetailsClass {
 
-    // it use in-side global exception class to  response  the exception related  data and other information to client
+    // it use in-side global exception class( class name- ExceptionController)
+    // to  response  the exception related  data and other information to the  client
 
     private Date timestamp;
     private String message;

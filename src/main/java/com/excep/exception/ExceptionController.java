@@ -13,14 +13,15 @@ import java.util.Date;
 public class ExceptionController {
 //Note - ExceptionController is a global exception handler class to handle all exception  is there using  method
 
-    // my first learning step -it simply handle it, and it handles predefined  execution not custom exception
+    // it simply handles to predefine exception(RuntimeException class) and
+    // print the message to clint and this message declare in response body
     @ExceptionHandler(RuntimeException.class)
     ResponseEntity<?> runtimeException( RuntimeException  ex){
         return ResponseEntity.badRequest().body( "Exception directly throws by  ExceptionController it is global Exception class");
     }
 
 
-    // my first learning step -it simply handle it, and it handles predefined  execution not custom exception
+    // this is handles the custom exception( name- CustomExceptionClass ) and print message to the clint using  ErrorDetailsClass class
     @ExceptionHandler(CustomExceptionClass.class)
     ResponseEntity<?> runtimeCustomExceptionHandle(CustomExceptionClass  ex , WebRequest webRequest){
       ErrorDetailsClass errorDetailsClass=new ErrorDetailsClass(new Date(), ex.getMessage(),webRequest.getDescription(false));

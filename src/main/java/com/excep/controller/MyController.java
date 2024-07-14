@@ -14,7 +14,7 @@ public class MyController {
        return ResponseEntity.ok(10/0);
     }
 
-    //it method handle normal use to create and handle second time for custom exception
+    // this API    generate the exception   and define  custom exception class in catch block
 
     @GetMapping(value = "/calculate")
     ResponseEntity<?> calculationSecond(){
